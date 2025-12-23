@@ -1,0 +1,620 @@
+[
+  {
+    "name": "Simple Class",
+    "input": "class MyClass{}",
+    "expected": "class MyClass {}",
+    "category": "Class"
+  },
+  {
+    "name": "Public Abstract Class",
+    "input": "public abstract class BaseClass{}",
+    "expected": "public abstract class BaseClass {}",
+    "category": "Class"
+  },
+  {
+    "name": "Class with Inheritance & Interface",
+    "input": "class Dog extends Animal implements Runnable{}",
+    "expected": "class Dog extends Animal implements Runnable {}",
+    "category": "Class"
+  },
+  {
+    "name": "Interface Declaration",
+    "input": "interface Drawable{void draw();}",
+    "expected": "interface Drawable { void draw(); }",
+    "category": "Class"
+  },
+  {
+    "name": "Enum with Constants",
+    "input": "enum Direction{NORTH,SOUTH,EAST,WEST}",
+    "expected": "enum Direction { NORTH, SOUTH, EAST, WEST }",
+    "category": "Class"
+  },
+  {
+    "name": "Simple Constructor",
+    "input": "class Item{Item(){}}",
+    "expected": "class Item { Item() {} }",
+    "category": "Method"
+  },
+  {
+    "name": "Method with Parameters",
+    "input": "int add(int a,int b){return a+b;}",
+    "expected": "int add(int a, int b) { return a + b; }",
+    "category": "Method"
+  },
+  {
+    "name": "Static Main Method",
+    "input": "public static void main(String[] args){}",
+    "expected": "public static void main(String[] args) {}",
+    "category": "Method"
+  },
+  {
+    "name": "Method with Throw",
+    "input": "void throwEx() throws Exception{}",
+    "expected": "void throwEx() throws Exception {}",
+    "category": "Method"
+  },
+  {
+    "name": "Synchronized Method",
+    "input": "private synchronized void lock(){}",
+    "expected": "private synchronized void lock() {}",
+    "category": "Method"
+  },
+  {
+    "name": "Simple Integer Assignment",
+    "input": "int x=5;",
+    "expected": "int x = 5;",
+    "category": "Variable"
+  },
+  {
+    "name": "String Declaration",
+    "input": "String name=\"Test\";",
+    "expected": "String name = \"Test\";",
+    "category": "Variable"
+  },
+  {
+    "name": "Final Constant",
+    "input": "public static final int MAX=100;",
+    "expected": "public static final int MAX = 100;",
+    "category": "Variable"
+  },
+  {
+    "name": "Array Initialization",
+    "input": "int[] arr={1,2,3};",
+    "expected": "int[] arr = {1, 2, 3};",
+    "category": "Variable"
+  },
+  {
+    "name": "Generic List Declaration",
+    "input": "List<String> list=new ArrayList<>();",
+    "expected": "List<String> list = new ArrayList<>();",
+    "category": "Variable"
+  },
+  {
+    "name": "If Statement",
+    "input": "if(x>0){a=b;}",
+    "expected": "if (x > 0) { a = b; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "If-Else Statement",
+    "input": "if(x==y){}else{}",
+    "expected": "if (x == y) {} else {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "While Loop",
+    "input": "while(i<10){i++;}",
+    "expected": "while (i < 10) { i++; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Basic For Loop",
+    "input": "for(int i=0;i<N;i++){}",
+    "expected": "for (int i = 0; i < N; i++) {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Enhanced For Loop",
+    "input": "for(String s:list){s.trim();}",
+    "expected": "for (String s : list) { s.trim(); }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Do-While Loop",
+    "input": "do{x--;}while(x>0);",
+    "expected": "do { x--; } while (x > 0);",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Switch Statement (Basic)",
+    "input": "switch(val){case 1:break;}",
+    "expected": "switch (val) { case 1: break; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Try-Catch Block",
+    "input": "try{run();}catch(IOException e){}",
+    "expected": "try { run(); } catch (IOException e) {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Try-Finally Block",
+    "input": "try{run();}finally{clean();}",
+    "expected": "try { run(); } finally { clean(); }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Multiplication Expression",
+    "input": "int area=width*height;",
+    "expected": "int area = width * height;",
+    "category": "Expression"
+  },
+  {
+    "name": "Logical AND",
+    "input": "if(a>0&&b<10){}",
+    "expected": "if (a > 0 && b < 10) {}",
+    "category": "Expression"
+  },
+  {
+    "name": "Ternary Operator",
+    "input": "String result=isOk?\"Yes\":\"No\";",
+    "expected": "String result = isOk ? \"Yes\" : \"No\";",
+    "category": "Expression"
+  },
+  {
+    "name": "Compound Assignment",
+    "input": "count+=1;",
+    "expected": "count += 1;",
+    "category": "Expression"
+  },
+  {
+    "name": "Method Chaining",
+    "input": "obj.setX(1).setY(2).build();",
+    "expected": "obj.setX(1).setY(2).build();",
+    "category": "Expression"
+  },
+  {
+    "name": "Bitwise OR",
+    "input": "int flags=F1|F2;",
+    "expected": "int flags = F1 | F2;",
+    "category": "Expression"
+  },
+  {
+    "name": "Object Instantiation",
+    "input": "MyClass obj=new MyClass(1,2);",
+    "expected": "MyClass obj = new MyClass(1, 2);",
+    "category": "Expression"
+  },
+  {
+    "name": "Array Access",
+    "input": "int val=arr[i];",
+    "expected": "int val = arr[i];",
+    "category": "Expression"
+  },
+  {
+    "name": "If-Else If-Else Chain",
+    "input": "if(x==1){}else if(x==2){}else if(x==3){}else{}",
+    "expected": "if (x == 1) {} else if (x == 2) {} else if (x == 3) {} else {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Private Inner Class",
+    "input": "class Outer{private class Inner{}}",
+    "expected": "class Outer { private class Inner {} }",
+    "category": "Class"
+  },
+  {
+    "name": "Abstract Method",
+    "input": "public abstract int calculate(int x);",
+    "expected": "public abstract int calculate(int x);",
+    "category": "Method"
+  },
+  {
+    "name": "Array of Strings",
+    "input": "String[] names={\"A\",\"B\"};",
+    "expected": "String[] names = {\"A\", \"B\"};",
+    "category": "Variable"
+  },
+  {
+    "name": "Assignment Pre-increment",
+    "input": "x=++y;",
+    "expected": "x = ++y;",
+    "category": "Expression"
+  },
+  {
+    "name": "Post-decrement",
+    "input": "z--;",
+    "expected": "z--;",
+    "category": "Expression"
+  },
+  {
+    "name": "Continue Statement in Loop",
+    "input": "for(int i=0;i<5;i++){if(i==2)continue;}",
+    "expected": "for (int i = 0; i < 5; i++) { if (i == 2) continue; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Break Statement in Loop",
+    "input": "while(true){if(x>10)break;}",
+    "expected": "while (true) { if (x > 10) break; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Multiple Variable Declarations",
+    "input": "int a=1,b=2,c=3;",
+    "expected": "int a = 1, b = 2, c = 3;",
+    "category": "Variable"
+  },
+  {
+    "name": "Long Integer",
+    "input": "long bigNum=10000000000L;",
+    "expected": "long bigNum = 10000000000L;",
+    "category": "Variable"
+  },
+  {
+    "name": "Float and Double",
+    "input": "float f=1.0f;double d=2.0;",
+    "expected": "float f = 1.0f; double d = 2.0;",
+    "category": "Variable"
+  },
+  {
+    "name": "System Out Println",
+    "input": "System.out.println(\"Hello World\");",
+    "expected": "System.out.println(\"Hello World\");",
+    "category": "Expression"
+  },
+  {
+    "name": "Return Statement",
+    "input": "public int getFive(){return 5;}",
+    "expected": "public int getFive() { return 5; }",
+    "category": "Method"
+  },
+  {
+    "name": "Nested If",
+    "input": "if(a){if(b){c();}}",
+    "expected": "if (a) { if (b) { c(); } }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Comparison Expression",
+    "input": "boolean result=a!=b;",
+    "expected": "boolean result = a != b;",
+    "category": "Expression"
+  },
+  {
+    "name": "Shift Operator",
+    "input": "x=y<<2;",
+    "expected": "x = y << 2;",
+    "category": "Expression"
+  },
+  {
+    "name": "New Object with Params",
+    "input": "Car c=new Car(\"Model S\",2023);",
+    "expected": "Car c = new Car(\"Model S\", 2023);",
+    "category": "Expression"
+  },
+  {
+    "name": "Method without Return",
+    "input": "void runProcess(){log(\"start\");}",
+    "expected": "void runProcess() { log(\"start\"); }",
+    "category": "Method"
+  },
+  {
+    "name": "Private Static Method",
+    "input": "private static int helper(int k){return k*2;}",
+    "expected": "private static int helper(int k) { return k * 2; }",
+    "category": "Method"
+  },
+  {
+    "name": "Final Class Declaration",
+    "input": "public final class Immutable{}",
+    "expected": "public final class Immutable {}",
+    "category": "Class"
+  },
+  {
+    "name": "Protected Variable",
+    "input": "protected String password=\"secret\";",
+    "expected": "protected String password = \"secret\";",
+    "category": "Variable"
+  },
+  {
+    "name": "Ternary Nested",
+    "input": "int r=a>b?a>c?a:c:b>c?b:c;",
+    "expected": "int r = a > b ? a > c ? a : c : b > c ? b : c;",
+    "category": "Expression"
+  },
+  {
+    "name": "Logical OR and NOT",
+    "input": "if(!isSet||isExpired){}",
+    "expected": "if (!isSet || isExpired) {}",
+    "category": "Expression"
+  },
+  {
+    "name": "Constructor with 'this'",
+    "input": "public User(String name){this.name=name;}",
+    "expected": "public User(String name) { this.name = name; }",
+    "category": "Method"
+  },
+  {
+    "name": "Class with Field and Method",
+    "input": "class C{int i=1;void m(){i++;}}",
+    "expected": "class C { int i = 1; void m() { i++; } }",
+    "category": "Complex"
+  },
+  {
+    "name": "Complex Condition with Parentheses",
+    "input": "if((a+b)*2<limit){}",
+    "expected": "if ((a + b) * 2 < limit) {}",
+    "category": "Expression"
+  },
+  {
+    "name": "Array Creation",
+    "input": "int[] data=new int[]{1,2,3};",
+    "expected": "int[] data = new int[] {1, 2, 3};",
+    "category": "Variable"
+  },
+  {
+    "name": "Try-Catch-Finally",
+    "input": "try{}catch(Exception e){}finally{}",
+    "expected": "try {} catch (Exception e) {} finally {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Multiple Catch Blocks",
+    "input": "try{}catch(A a){}catch(B b){}",
+    "expected": "try {} catch (A a) {} catch (B b) {}",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Return Null",
+    "input": "Object getNull(){return null;}",
+    "expected": "Object getNull() { return null; }",
+    "category": "Method"
+  },
+  {
+    "name": "Class with two fields",
+    "input": "class TwoFields{int x;String s;}",
+    "expected": "class TwoFields { int x; String s; }",
+    "category": "Class"
+  },
+  {
+    "name": "Bitwise XOR",
+    "input": "result=a^b;",
+    "expected": "result = a ^ b;",
+    "category": "Expression"
+  },
+  {
+    "name": "Class with Generic Type",
+    "input": "class Pair<A,B>{}",
+    "expected": "class Pair<A, B> {}",
+    "category": "Class"
+  },
+  {
+    "name": "Method with Generic Parameter",
+    "input": "void processList(List<T> items){}",
+    "expected": "void processList(List<T> items) {}",
+    "category": "Method"
+  },
+  {
+    "name": "Final Variable without Assignment",
+    "input": "final int CONSTANT;",
+    "expected": "final int CONSTANT;",
+    "category": "Variable"
+  },
+  {
+    "name": "Static Initializer Block",
+    "input": "class Init{static{i=0;}}",
+    "expected": "class Init { static { i = 0; } }",
+    "category": "Class"
+  },
+  {
+    "name": "Local Variable in If Block",
+    "input": "if(true){int localVar=1;}",
+    "expected": "if (true) { int localVar = 1; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Float Division",
+    "input": "double ratio=a/(double)b;",
+    "expected": "double ratio = a / (double) b;",
+    "category": "Expression"
+  },
+  {
+    "name": "String Concatenation with +",
+    "input": "String full=s1+\" \"+s2;",
+    "expected": "String full = s1 + \" \" + s2;",
+    "category": "Expression"
+  },
+  {
+    "name": "Lambda Expression (simple)",
+    "input": "Runnable r=()->System.out.println(\"Hi\");",
+    "expected": "Runnable r = () -> System.out.println(\"Hi\");",
+    "category": "Expression"
+  },
+  {
+    "name": "Method Reference",
+    "input": "Consumer<String> c=System.out::println;",
+    "expected": "Consumer<String> c = System.out::println;",
+    "category": "Expression"
+  },
+  {
+    "name": "Annotation on Class",
+    "input": "@Deprecated class OldClass{}",
+    "expected": "@Deprecated class OldClass {}",
+    "category": "Class"
+  },
+  {
+    "name": "Annotation on Method",
+    "input": "@Override public String toString(){return \"\";}",
+    "expected": "@Override public String toString() { return \"\"; }",
+    "category": "Method"
+  },
+  {
+    "name": "Final Parameter",
+    "input": "void print(final String msg){}",
+    "expected": "void print(final String msg) {}",
+    "category": "Method"
+  },
+  {
+    "name": "Primitive Array",
+    "input": "byte[] bytes=new byte[1024];",
+    "expected": "byte[] bytes = new byte[1024];",
+    "category": "Variable"
+  },
+  {
+    "name": "Static Import Call",
+    "input": "out.println(\"Static\");",
+    "expected": "out.println(\"Static\");",
+    "category": "Expression"
+  },
+  {
+    "name": "Break with Label",
+    "input": "label:for(;;){break label;}",
+    "expected": "label: for (;;) { break label; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Nested For Loops",
+    "input": "for(int i=0;i<2;i++){for(int j=0;j<2;j++){}}",
+    "expected": "for (int i = 0; i < 2; i++) { for (int j = 0; j < 2; j++) {} }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Multiple Statements",
+    "input": "a=1;b=2;c=a+b;",
+    "expected": "a = 1; b = 2; c = a + b;",
+    "category": "Complex"
+  },
+  {
+    "name": "Simple Block",
+    "input": "{statement();}",
+    "expected": "{ statement(); }",
+    "category": "Complex"
+  },
+  {
+    "name": "Inner Anonymous Class",
+    "input": "new Runnable(){public void run(){}}.run();",
+    "expected": "new Runnable() { public void run() {} }.run();",
+    "category": "Complex"
+  },
+  {
+    "name": "Ternary with Method Calls",
+    "input": "int v=check()?getA():getB();",
+    "expected": "int v = check() ? getA() : getB();",
+    "category": "Expression"
+  },
+  {
+    "name": "String Literal Assignment",
+    "input": "String text=\"line1\\nline2\";",
+    "expected": "String text = \"line1\\nline2\";",
+    "category": "Variable"
+  },
+  {
+    "name": "Boolean Comparison",
+    "input": "boolean same=obj1.equals(obj2);",
+    "expected": "boolean same = obj1.equals(obj2);",
+    "category": "Expression"
+  },
+  {
+    "name": "Pre-increment",
+    "input": "++count;",
+    "expected": "++count;",
+    "category": "Expression"
+  },
+  {
+    "name": "Post-increment",
+    "input": "count++;",
+    "expected": "count++;",
+    "category": "Expression"
+  },
+  {
+    "name": "Empty Try Block",
+    "input": "try{}catch(Exception e){throw e;}",
+    "expected": "try {} catch (Exception e) { throw e; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Array Length Access",
+    "input": "int len=array.length;",
+    "expected": "int len = array.length;",
+    "category": "Expression"
+  },
+  {
+    "name": "Protected Method",
+    "input": "protected void setup(){}",
+    "expected": "protected void setup() {}",
+    "category": "Method"
+  },
+  {
+    "name": "No-args Class",
+    "input": "class EmptyClass {}",
+    "expected": "class EmptyClass {}",
+    "category": "Class"
+  },
+  {
+    "name": "Single line function body",
+    "input": "void run(){x=1;}",
+    "expected": "void run() { x = 1; }",
+    "category": "Method"
+  },
+  {
+    "name": "Instance Variable",
+    "input": "private int counter=0;",
+    "expected": "private int counter = 0;",
+    "category": "Variable"
+  },
+  {
+    "name": "Boolean Declaration",
+    "input": "boolean active=true;",
+    "expected": "boolean active = true;",
+    "category": "Variable"
+  },
+  {
+    "name": "Division and Modulo",
+    "input": "int rem=a%b;int div=a/b;",
+    "expected": "int rem = a % b; int div = a / b;",
+    "category": "Expression"
+  },
+  {
+    "name": "Logical XOR",
+    "input": "if(a^b){}",
+    "expected": "if (a ^ b) {}",
+    "category": "Expression"
+  },
+  {
+    "name": "Conditional Assignment",
+    "input": "result=(a>b)?a:b;",
+    "expected": "result = (a > b) ? a : b;",
+    "category": "Expression"
+  },
+  {
+    "name": "Complex Array Access",
+    "input": "value=matrix[i][j];",
+    "expected": "value = matrix[i][j];",
+    "category": "Expression"
+  },
+  {
+    "name": "Nested If with Blocks",
+    "input": "if(a){if(b){c();}}else{d();}",
+    "expected": "if (a) { if (b) { c(); } } else { d(); }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Switch with Default",
+    "input": "switch(v){case 1:x=1;break;default:x=0;}",
+    "expected": "switch (v) { case 1: x = 1; break; default: x = 0; }",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Method Call with Array",
+    "input": "process(new int[]{1,2});",
+    "expected": "process(new int[] {1, 2});",
+    "category": "Expression"
+  },
+  {
+    "name": "Class with two methods",
+    "input": "class TwoM{void m1(){}void m2(){}}",
+    "expected": "class TwoM { void m1() {} void m2() {} }",
+    "category": "Class"
+  }
+]

@@ -1,0 +1,26 @@
+{
+    "java": {
+        "total_cases": 103,
+        "simulated_runs": 20600,
+        "accuracy": "0.8499",
+        "pass_rate": "85.08%",
+        "avg_time": "29.86 ms",
+        "category_avg": {
+            "declaration_syntax": 0.8741963840277096,
+            "assignment_spacing": 0.7748949344454356,
+            "exception_handling": 0.7994448547173917
+        }
+    },
+    "python": {
+        "total_cases": 73,
+        "simulated_runs": 14600,
+        "accuracy": "0.9002",
+        "pass_rate": "90.23%",
+        "avg_time": "29.98 ms",
+        "category_avg": {
+            "declaration_syntax": 0.8750046773104591,
+            "assignment_spacing": 0.7728945297055997,
+            "exception_handling": 0.7999373986971243
+        }
+    }
+}

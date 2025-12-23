@@ -1,0 +1,440 @@
+[
+  {
+    "name": "Simple Function",
+    "input": "def hello():pass",
+    "expected": "def hello(): pass",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Positional Args",
+    "input": "def add(a,b):return a+b",
+    "expected": "def add(a, b): return a + b",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Default Args",
+    "input": "def greet(name=\"World\"):print(name)",
+    "expected": "def greet(name = \"World\"): print(name)",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Star Args",
+    "input": "def func(*args):pass",
+    "expected": "def func(*args): pass",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Kwargs",
+    "input": "def func(**kwargs):pass",
+    "expected": "def func(**kwargs): pass",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Annotations",
+    "input": "def get_int(s:str)->int:return int(s)",
+    "expected": "def get_int(s: str) -> int: return int(s)",
+    "category": "Function"
+  },
+  {
+    "name": "Class Definition",
+    "input": "class MyClass:pass",
+    "expected": "class MyClass: pass",
+    "category": "Class"
+  },
+  {
+    "name": "Class with Inheritance",
+    "input": "class Child(Parent):pass",
+    "expected": "class Child(Parent): pass",
+    "category": "Class"
+  },
+  {
+    "name": "Method Definition",
+    "input": "class C:def method(self):pass",
+    "expected": "class C: def method(self): pass",
+    "category": "Class"
+  },
+  {
+    "name": "Static Method",
+    "input": "class C:@staticmethod\ndef static_m():pass",
+    "expected": "class C: @staticmethod def static_m(): pass",
+    "category": "Class"
+  },
+  {
+    "name": "Class Variable",
+    "input": "class C:VAR=10",
+    "expected": "class C: VAR = 10",
+    "category": "Class"
+  },
+  {
+    "name": "Simple Assignment",
+    "input": "x=5",
+    "expected": "x = 5",
+    "category": "Variable"
+  },
+  {
+    "name": "String Assignment",
+    "input": "name=\"Python\"",
+    "expected": "name = \"Python\"",
+    "category": "Variable"
+  },
+  {
+    "name": "Tuple Unpacking",
+    "input": "a,b=1,2",
+    "expected": "a, b = 1, 2",
+    "category": "Variable"
+  },
+  {
+    "name": "List Assignment",
+    "input": "items=[1,2,3]",
+    "expected": "items = [1, 2, 3]",
+    "category": "Variable"
+  },
+  {
+    "name": "Dictionary Assignment",
+    "input": "data={\"key\":1}",
+    "expected": "data = {\"key\": 1}",
+    "category": "Variable"
+  },
+  {
+    "name": "Set Assignment",
+    "input": "unique={1,2,3}",
+    "expected": "unique = {1, 2, 3}",
+    "category": "Variable"
+  },
+  {
+    "name": "If Statement",
+    "input": "if x>0:print(x)",
+    "expected": "if x > 0: print(x)",
+    "category": "Control Flow"
+  },
+  {
+    "name": "If-Else Statement",
+    "input": "if x==y:pass\nelse:fail()",
+    "expected": "if x == y: pass\nelse: fail()",
+    "category": "Control Flow"
+  },
+  {
+    "name": "If-Elif-Else Chain",
+    "input": "if a==1:pass\nelif a==2:pass\nelse:pass",
+    "expected": "if a == 1: pass\nelif a == 2: pass\nelse: pass",
+    "category": "Control Flow"
+  },
+  {
+    "name": "While Loop",
+    "input": "while i<10:i+=1",
+    "expected": "while i < 10: i += 1",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Basic For Loop (range)",
+    "input": "for i in range(10):pass",
+    "expected": "for i in range(10): pass",
+    "category": "Control Flow"
+  },
+  {
+    "name": "For Loop (list iteration)",
+    "input": "for item in items:process(item)",
+    "expected": "for item in items: process(item)",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Try-Except",
+    "input": "try:f()except Exception as e:log(e)",
+    "expected": "try: f() except Exception as e: log(e)",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Try-Finally",
+    "input": "try:f()finally:clean()",
+    "expected": "try: f() finally: clean()",
+    "category": "Control Flow"
+  },
+  {
+    "name": "With Statement",
+    "input": "with open(\"f.txt\") as f:f.read()",
+    "expected": "with open(\"f.txt\") as f: f.read()",
+    "category": "Control Flow"
+  },
+  {
+    "name": "List Comprehension",
+    "input": "squares=[x**2 for x in range(10)]",
+    "expected": "squares = [x ** 2 for x in range(10)]",
+    "category": "Comprehension"
+  },
+  {
+    "name": "Dict Comprehension",
+    "input": "d={k:v for k,v in l}",
+    "expected": "d = {k: v for k, v in l}",
+    "category": "Comprehension"
+  },
+  {
+    "name": "Generator Expression",
+    "input": "g=(x for x in data if x>0)",
+    "expected": "g = (x for x in data if x > 0)",
+    "category": "Comprehension"
+  },
+  {
+    "name": "F-String Basic",
+    "input": "s=f\"Value is {val}\"",
+    "expected": "s = f\"Value is {val}\"",
+    "category": "String"
+  },
+  {
+    "name": "F-String with Expression",
+    "input": "s=f\"Result: {a+b}\"",
+    "expected": "s = f\"Result: {a + b}\"",
+    "category": "String"
+  },
+  {
+    "name": "Addition Expression",
+    "input": "total=a+b+c",
+    "expected": "total = a + b + c",
+    "category": "Expression"
+  },
+  {
+    "name": "Boolean Logical AND",
+    "input": "if is_ready and is_active:pass",
+    "expected": "if is_ready and is_active: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "Exponentiation",
+    "input": "p=x**y",
+    "expected": "p = x ** y",
+    "category": "Expression"
+  },
+  {
+    "name": "Walrus Operator",
+    "input": "if(n:=len(l))>0:print(n)",
+    "expected": "if (n := len(l)) > 0: print(n)",
+    "category": "Expression"
+  },
+  {
+    "name": "Lambda Function",
+    "input": "f=lambda x,y:x+y",
+    "expected": "f = lambda x, y: x + y",
+    "category": "Function"
+  },
+  {
+    "name": "Function with Type Hints",
+    "input": "def calculate(a:int,b:int)->int:return a*b",
+    "expected": "def calculate(a: int, b: int) -> int: return a * b",
+    "category": "Function"
+  },
+  {
+    "name": "Abstract Class with Method",
+    "input": "from abc import ABC,abstractmethod\nclass Shape(ABC):\n@abstractmethod\ndef area(self):pass",
+    "expected": "from abc import ABC, abstractmethod\nclass Shape(ABC):\n@abstractmethod\ndef area(self): pass",
+    "category": "Class"
+  },
+  {
+    "name": "Multiple Variable Assignment",
+    "input": "i=j=k=0",
+    "expected": "i = j = k = 0",
+    "category": "Variable"
+  },
+  {
+    "name": "In Operator",
+    "input": "if \"a\" in s:pass",
+    "expected": "if \"a\" in s: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "Not In Operator",
+    "input": "if 1 not in l:pass",
+    "expected": "if 1 not in l: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "Is Operator",
+    "input": "if x is None:pass",
+    "expected": "if x is None: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "List Indexing",
+    "input": "val=l[0]",
+    "expected": "val = l[0]",
+    "category": "Expression"
+  },
+  {
+    "name": "Slicing",
+    "input": "sub=l[1:5]",
+    "expected": "sub = l[1:5]",
+    "category": "Expression"
+  },
+  {
+    "name": "Extended Slicing",
+    "input": "rev=l[::-1]",
+    "expected": "rev = l[::-1]",
+    "category": "Expression"
+  },
+  {
+    "name": "Method Call",
+    "input": "obj.method(1,2)",
+    "expected": "obj.method(1, 2)",
+    "category": "Expression"
+  },
+  {
+    "name": "Chained Comparisons",
+    "input": "if 0<x<=10:pass",
+    "expected": "if 0 < x <= 10: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "Nested List Comprehension",
+    "input": "matrix=[[x for x in r] for r in rows]",
+    "expected": "matrix = [[x for x in r] for r in rows]",
+    "category": "Comprehension"
+  },
+  {
+    "name": "Conditional Expression (Ternary)",
+    "input": "msg=\"y\" if x else \"n\"",
+    "expected": "msg = \"y\" if x else \"n\"",
+    "category": "Expression"
+  },
+  {
+    "name": "Multiline String Assignment",
+    "input": "s=\"\"\"line1\\nline2\"\"\"",
+    "expected": "s = \"\"\"line1\\nline2\"\"\"",
+    "category": "Variable"
+  },
+  {
+    "name": "Class with two methods",
+    "input": "class C:def m1(self):pass\ndef m2(self):pass",
+    "expected": "class C: def m1(self): pass\ndef m2(self): pass",
+    "category": "Class"
+  },
+  {
+    "name": "Loop with 'continue'",
+    "input": "for i in range(5):\nif i==2:continue",
+    "expected": "for i in range(5):\nif i == 2: continue",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Loop with 'break'",
+    "input": "while True:\nif check():break",
+    "expected": "while True:\nif check(): break",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Function Returning a Lambda",
+    "input": "def make_adder(n):return lambda x:x+n",
+    "expected": "def make_adder(n): return lambda x: x + n",
+    "category": "Function"
+  },
+  {
+    "name": "Decorator with arguments",
+    "input": "@route(\"/user\")\ndef handler():pass",
+    "expected": "@route(\"/user\")\ndef handler(): pass",
+    "category": "Function"
+  },
+  {
+    "name": "Yield in Generator Function",
+    "input": "def gen(n):for i in range(n):yield i",
+    "expected": "def gen(n): for i in range(n): yield i",
+    "category": "Function"
+  },
+  {
+    "name": "Augmented Assignment (Multiply)",
+    "input": "count*=2",
+    "expected": "count *= 2",
+    "category": "Expression"
+  },
+  {
+    "name": "Augmented Assignment (Bitwise)",
+    "input": "flags|=F_ON",
+    "expected": "flags |= F_ON",
+    "category": "Expression"
+  },
+  {
+    "name": "Function Call with Kwargs",
+    "input": "func(a=1,b=2)",
+    "expected": "func(a = 1, b = 2)",
+    "category": "Expression"
+  },
+  {
+    "name": "Function Call with Star Args",
+    "input": "func(*data)",
+    "expected": "func(*data)",
+    "category": "Expression"
+  },
+  {
+    "name": "Dictionary with String Keys",
+    "input": "d={\n\"name\":\"Alice\",\n\"age\":30\n}",
+    "expected": "d = {\n\"name\": \"Alice\",\n\"age\": 30\n}",
+    "category": "Variable"
+  },
+  {
+    "name": "Complex Condition",
+    "input": "if(a or b) and not c:pass",
+    "expected": "if (a or b) and not c: pass",
+    "category": "Expression"
+  },
+  {
+    "name": "Nested If with Elif",
+    "input": "if x>0:\nif x>10:pass\nelse:pass\nelif x==0:pass",
+    "expected": "if x > 0:\nif x > 10: pass\nelse: pass\nelif x == 0: pass",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Class with \\__init\\__",
+    "input": "class P:def __init__(self,name):\nself.name=name",
+    "expected": "class P: def __init__(self, name):\nself.name = name",
+    "category": "Class"
+  },
+  {
+    "name": "Try-Except with multiple types",
+    "input": "try:f()except(TypeError,ValueError)as e:pass",
+    "expected": "try: f() except (TypeError, ValueError) as e: pass",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Raise Exception",
+    "input": "if not valid:raise ValueError(\"Invalid\")",
+    "expected": "if not valid: raise ValueError(\"Invalid\")",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Delete Statement",
+    "input": "del l[0]",
+    "expected": "del l[0]",
+    "category": "Control Flow"
+  },
+  {
+    "name": "Inline Lambda in Map",
+    "input": "result=list(map(lambda x:x*2,data))",
+    "expected": "result = list(map(lambda x: x * 2, data))",
+    "category": "Expression"
+  },
+  {
+    "name": "Float Division",
+    "input": "ratio=a/b",
+    "expected": "ratio = a / b",
+    "category": "Expression"
+  },
+  {
+    "name": "Integer Division",
+    "input": "quotient=a//b",
+    "expected": "quotient = a // b",
+    "category": "Expression"
+  },
+  {
+    "name": "Boolean Literals",
+    "input": "is_ok=True;is_bad=False",
+    "expected": "is_ok = True; is_bad = False",
+    "category": "Variable"
+  },
+  {
+    "name": "Set Comprehension",
+    "input": "unique_squares={x*x for x in data}",
+    "expected": "unique_squares = {x * x for x in data}",
+    "category": "Comprehension"
+  },
+  {
+    "name": "F-String with Formatting",
+    "input": "s=f\"Pi: {pi:.2f}\"",
+    "expected": "s = f\"Pi: {pi:.2f}\"",
+    "category": "String"
+  }
+]
